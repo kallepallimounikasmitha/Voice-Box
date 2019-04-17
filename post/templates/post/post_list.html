@@ -1,0 +1,16 @@
+<div>
+    <h1><a href="/">VoiceBox</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>name: {{ post.user }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.date|linebreaksbr }}</p>
+        <img src="{{ post.image.url }}" width="500px"/>
+        <a href="{% url 'post_new' %}">CREATE NEW POST</a>
+
+
+    </div>
+{% endfor %}
